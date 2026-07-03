@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== META ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="MD. Amir Hamza Marjan — Web Developer. Building modern, fast, and responsive websites that blend creativity with functionality.">
+    <meta name="keywords" content="web developer, frontend developer, portfolio, responsive design, HTML, CSS, JavaScript, Bootstrap, React, Tailwind, Bangladesh">
+    <meta name="author" content="MD. Amir Hamza Marjan">
+    <meta name="robots" content="index, follow">
+
+    <!-- ========== Open Graph ========== -->
+    <meta property="og:title" content="MD. Amir Hamza Marjan — Web Developer">
+    <meta property="og:description" content="Building modern, fast, and responsive websites that blend creativity with functionality.">
+    <meta property="og:type" content="website">
+    <!-- UPDATE: Replace with your actual website URL -->
+    <meta property="og:url" content="https://amirhamzamarjan.dev">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+
+    <!-- ========== TITLE ========== -->
+    <title>MD. Amir Hamza Marjan — Web Developer</title>
+
+    <!-- ========== FAVICON ========== -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+
+    <!-- ========== Bootstrap 5 CSS ========== -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- ========== Bootstrap Icons ========== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- ========== Google Fonts ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ========== Custom CSS ========== -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================== -->
+    <!-- ========== PRELOADER ========== -->
+    <!-- ============================== -->
+    <div id="preloader" aria-label="Loading">
+        <div class="preloader-inner">
+            <div class="preloader-logo">
+                <span class="preloader-bracket">{</span>
+                <span class="preloader-name">&lt;H/&gt;</span>
+                <span class="preloader-bracket">}</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+            <p class="preloader-text">Loading Experience...</p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- ========== SCROLL PROGRESS BAR ========== -->
+    <!-- ============================================ -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true">
+        <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- ========== FLOATING SHAPES (BG) ========== -->
+    <!-- ============================================== -->
+    <div class="floating-shapes" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+        <div class="shape shape-6"></div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- ========== FLOATING SOCIAL ICONS ========== -->
+    <!-- ============================================ -->
+    <aside class="floating-socials" aria-label="Social media links">
+        <a href="https://github.com/amirhamzamarjan" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="floating-social-link">
+            <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/amir-hamza-marjan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="floating-social-link">
+            <i class="bi bi-linkedin"></i>
+        </a>
+        <!-- UPDATE: Replace href with your X (Twitter) profile link -->
+        <a href="https://twitter.com/username" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" class="floating-social-link">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="https://instagram.com/username" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="floating-social-link">
+            <i class="bi bi-instagram"></i>
+        </a>
+        <div class="floating-socials-line"></div>
+    </aside>
+
+    <!-- ========== EMAIL SIDE ELEMENT ========== -->
+    <aside class="floating-email" aria-label="Email">
+        <a href="mailto:amirhamzamarjan@gmail.com" class="floating-email-link">amirhamzamarjan@gmail.com</a>
+        <div class="floating-email-line"></div>
+    </aside>
+
+    <!-- ======================================== -->
+    <!-- ========== CUSTOM CURSOR ========== -->
+    <!-- ======================================== -->
+    <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+    <div class="custom-cursor-dot" id="customCursorDot" aria-hidden="true"></div>
+
+    <!-- ======================================== -->
+    <!-- ========== NAVIGATION ========== -->
+    <!-- ======================================== -->
+    <header id="navbar" class="navbar-custom">
+        <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#hero">
+                    <span class="logo-bracket">{</span>
+                    <span class="logo-text">&lt;H/&gt;</span>
+                    <span class="logo-bracket">}</span>
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" id="navToggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-line"></span>
+                    <span class="toggler-line"></span>
+                    <span class="toggler-line"></span>
+                </button>
+
+                <!-- Nav Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#hero">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- CTA Button -->
+                    <a href="#contact" class="btn btn-nav-cta ms-lg-4">
+                        Let's Talk
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ======================================== -->
+    <!-- ========== HERO SECTION ========== -->
+    <!-- ======================================== -->
+    <section id="hero" class="hero-section" aria-label="Hero">
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-grid-pattern" aria-hidden="true"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-7">
+                    <div class="hero-content">
+                        <!-- Badge -->
+                        <div class="hero-badge reveal-up" data-delay="0">
+                            <span class="badge-dot"></span>
+                            Available for Freelance Work
+                        </div>
+
+                        <!-- Heading -->
+                        <h1 class="hero-title reveal-up" data-delay="100">
+                            <span class="hero-greeting">Hello, I'm</span>
+                            <span class="hero-name">Amir Hamza<br>Marjan<span class="hero-accent">.</span></span>
+                        </h1>
+
+                        <!-- Subtitle -->
+                        <p class="hero-subtitle reveal-up" data-delay="200">
+                            <span class="typed-wrapper">
+                                <span class="typed-prefix">A&nbsp;</span>
+                                <span class="typed-text" id="typedText"></span>
+                                <span class="typed-cursor">|</span>
+                            </span>
+                        </p>
+
+                        <!-- Description -->
+                        <p class="hero-description reveal-up" data-delay="300">
+                            I build modern, fast, and responsive websites that blend creativity with
+                            functionality. Passionate about crafting clean, user-friendly digital
+                            experiences using the latest web technologies, I transform ideas into
+                            engaging and high-performing websites.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="hero-cta reveal-up" data-delay="400">
+                            <a href="#projects" class="btn btn-primary-custom btn-lg">
+                                <span>View My Work</span>
+                                <i class="bi bi-arrow-down-right"></i>
+                            </a>
+                            <a href="assets/resume/Amir_Hamza_Marjan_Resume.pdf" class="btn btn-outline-custom btn-lg" download>
+                                <span>Download CV</span>
+                                <i class="bi bi-download"></i>
+                            </a>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="hero-stats reveal-up" data-delay="500">
+                            <div class="hero-stat">
+                                <span class="hero-stat-number counter" data-target="4">0</span><span class="hero-stat-plus">+</span>
+                                <span class="hero-stat-label">Years Experience</span>
+                            </div>
+                            <div class="hero-stat-divider"></div>
+                            <div class="hero-stat">
+                                <span class="hero-stat-number counter" data-target="30">0</span><span class="hero-stat-plus">+</span>
+                                <span class="hero-stat-label">Projects Completed</span>
+                            </div>
+                            <div class="hero-stat-divider"></div>
+                            <div class="hero-stat">
+                                <span class="hero-stat-number counter" data-target="20">0</span><span class="hero-stat-plus">+</span>
+                                <span class="hero-stat-label">Happy Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image / Visual -->
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="hero-visual reveal-up" data-delay="300">
+                        <div class="hero-image-wrapper">
+                            <div class="hero-image-glow"></div>
+                            <div class="hero-image-border"></div>
+                            <div class="hero-image-placeholder">
+                                <img src="images/heroimg.jpg" alt="">
+                            </div>
+                            <!-- Floating Elements -->
+                            <div class="hero-float-card hero-float-1">
+                                <i class="bi bi-code-slash"></i>
+                                <span>Web Developer</span>
+                            </div>
+                            <div class="hero-float-card hero-float-2">
+                                <i class="bi bi-palette"></i>
+                                <span>Responsive Design</span>
+                            </div>
+                            <div class="hero-float-card hero-float-3">
+                                <i class="bi bi-lightning-fill"></i>
+                                <span>Performance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="hero-scroll-indicator reveal-up" data-delay="600">
+                <a href="#about" aria-label="Scroll to about section">
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- ========== ABOUT SECTION ========== -->
+    <!-- ======================================== -->
+    <section id="about" class="section about-section" aria-label="About Me">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center">
+                <span class="section-tag reveal-up">
+                    <i class="bi bi-person"></i>
+                    Get To Know Me
+                </span>
+                <h2 class="section-title reveal-up" data-delay="100">
+                    About <span class="text-gradient">Me</span>
+                </h2>
+                <p class="section-subtitle reveal-up" data-delay="200">
+                    A brief introduction to who I am and what drives my passion for development.
+                </p>
+            </div>
+
+            <div class="row g-5 align-items-center">
+                <!-- About Image -->
+                <div class="col-lg-5">
+                    <div class="about-image-wrapper reveal-left">
+                        <div class="about-image-card">
+                            <div class="about-image-placeholder">
+                                <img src="images/marjan02.jpg" alt="">
+                            </div>
+                            <div class="about-image-pattern"></div>
+                        </div>
+                        <!-- Experience Badge -->
+                        <div class="about-experience-badge">
+                            <span class="about-exp-number counter" data-target="4">0</span>
+                            <span class="about-exp-text">Years of<br>Experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Content -->
+                <div class="col-lg-7">
+                    <div class="about-content">
+                        <h3 class="about-heading reveal-right" data-delay="100">
+                            I'm <span class="text-gradient">Amir Hamza Marjan</span>, a passionate Web Developer based in
+                            <span class="about-location">
+                                <i class="bi bi-geo-alt-fill"></i> Uttara, Dhaka, Bangladesh
+                            </span>
+                        </h3>
+                        <p class="about-text reveal-right" data-delay="200">
+                            I am a passionate Web Developer who thrives on building responsive, modern, and
+                            user-friendly websites. I focus on writing clean, maintainable code and delivering
+                            high-performance digital experiences that look great on every device. With a strong
+                            foundation in both frontend and basic backend technologies, I bring ideas to life
+                            through thoughtful design and solid engineering.
+                        </p>
+                        <p class="about-text reveal-right" data-delay="300">
+                            I am constantly learning and exploring new technologies to stay ahead in the
+                            ever-evolving world of web development. Whether it's crafting a pixel-perfect landing
+                            page or building a full-featured web application, I pour my creativity and dedication
+                            into every project. I enjoy turning complex ideas into elegant, real-world websites
+                            that make a lasting impression.
+                        </p>
+
+                        <!-- About Info Grid -->
+                        <div class="about-info-grid reveal-right" data-delay="400">
+                            <div class="about-info-item">
+                                <span class="about-info-label">Name</span>
+                                <span class="about-info-value">MD. Amir Hamza Marjan</span>
+                            </div>
+                            <div class="about-info-item">
+                                <span class="about-info-label">Email</span>
+                                <span class="about-info-value">amirhamzamarjan@gmail.com</span>
+                            </div>
+                            <div class="about-info-item">
+                                <span class="about-info-label">Phone</span>
+                                <span class="about-info-value">01849485558</span>
+                            </div>
+                            <div class="about-info-item">
+                                <span class="about-info-label">Location</span>
+                                <span class="about-info-value">Uttara, Dhaka, Bangladesh</span>
+                            </div>
+                            <div class="about-info-item">
+                                <span class="about-info-label">Degree</span>
+                                <span class="about-info-value">Diploma in Computer Science</span>
+                            </div>
+                            <div class="about-info-item">
+                                <span class="about-info-label">Freelance</span>
+                                <span class="about-info-value status-available">Available</span>
+                            </div>
+                        </div>
+
+                        <!-- About CTA -->
+                        <div class="about-cta reveal-right" data-delay="500">
+                            <a href="#contact" class="btn btn-primary-custom">
+                                <span>Let's Work Together</span>
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                            <a href="assets/resume/Amir_Hamza_Marjan_Resume.pdf" class="btn btn-outline-custom" download>
+                                <span>Download CV</span>
+                                <i class="bi bi-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- ========== SKILLS SECTION ========== -->
+    <!-- ======================================== -->
+    <section id="skills" class="section skills-section" aria-label="Skills">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center">
+                <span class="section-tag reveal-up">
+                    <i class="bi bi-lightning"></i>
+                    My Expertise
+                </span>
+                <h2 class="section-title reveal-up" data-delay="100">
+                    Skills & <span class="text-gradient">Technologies</span>
+                </h2>
+                <p class="section-subtitle reveal-up" data-delay="200">
+                    Technologies and tools I use to bring ideas to life.
+                </p>
+            </div>
+
+            <!-- Skills Category Tabs -->
+            <div class="skills-tabs reveal-up" data-delay="300">
+                <button class="skills-tab active" data-filter="all">All</button>
+                <button class="skills-tab" data-filter="frontend">Frontend</button>
+                <button class="skills-tab" data-filter="backend">Backend</button>
+                <button class="skills-tab" data-filter="design">Design</button>
+                <button class="skills-tab" data-filter="tools">Tools</button>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="skills-grid">
+                <!-- ===== FRONTEND SKILLS ===== -->
+
+                <!-- Skill: HTML5 -->
+                <div class="skill-card reveal-up" data-delay="100" data-category="frontend">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-filetype-html"></i>
+                        </div>
+                        <h4 class="skill-name">HTML5</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="95">
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: CSS3 -->
+                <div class="skill-card reveal-up" data-delay="150" data-category="frontend">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-filetype-css"></i>
+                        </div>
+                        <h4 class="skill-name">CSS3</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="92">
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: JavaScript -->
+                <div class="skill-card reveal-up" data-delay="200" data-category="frontend">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-filetype-js"></i>
+                        </div>
+                        <h4 class="skill-name">JavaScript</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="88">
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: Bootstrap -->
+                <div class="skill-card reveal-up" data-delay="250" data-category="frontend">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-bootstrap"></i>
+                        </div>
+                        <h4 class="skill-name">Bootstrap</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="90">
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: Tailwind CSS -->
+                <div class="skill-card reveal-up" data-delay="300" data-category="frontend">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-wind"></i>
+                        </div>
+                        <h4 class="skill-name">Tailwind CSS</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="85">
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: React.js -->
+                <div class="skill-card reveal-up" data-delay="350" data-category="frontend">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-filetype-jsx"></i>
+                        </div>
+                        <h4 class="skill-name">React.js</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="80">
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== BACKEND (BASIC) SKILLS ===== -->
+
+                <!-- Skill: PHP -->
+                <div class="skill-card reveal-up" data-delay="100" data-category="backend">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-filetype-php"></i>
+                        </div>
+                        <h4 class="skill-name">PHP</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="65">
+                                    <span class="skill-percent">65%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: Node.js -->
+                <div class="skill-card reveal-up" data-delay="150" data-category="backend">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-hdd-stack"></i>
+                        </div>
+                        <h4 class="skill-name">Node.js</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="60">
+                                    <span class="skill-percent">60%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: Express.js -->
+                <div class="skill-card reveal-up" data-delay="200" data-category="backend">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-server"></i>
+                        </div>
+                        <h4 class="skill-name">Express.js</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="58">
+                                    <span class="skill-percent">58%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: MySQL -->
+                <div class="skill-card reveal-up" data-delay="250" data-category="backend">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-database"></i>
+                        </div>
+                        <h4 class="skill-name">MySQL</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="62">
+                                    <span class="skill-percent">62%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== TOOLS ===== -->
+
+                <!-- Skill: Git -->
+                <div class="skill-card reveal-up" data-delay="100" data-category="tools">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-git"></i>
+                        </div>
+                        <h4 class="skill-name">Git</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="85">
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: GitHub -->
+                <div class="skill-card reveal-up" data-delay="150" data-category="tools">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-github"></i>
+                        </div>
+                        <h4 class="skill-name">GitHub</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="88">
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: VS Code -->
+                <div class="skill-card reveal-up" data-delay="200" data-category="tools">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-terminal"></i>
+                        </div>
+                        <h4 class="skill-name">VS Code</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="92">
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: Figma -->
+                <div class="skill-card reveal-up" data-delay="250" data-category="design">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-brush"></i>
+                        </div>
+                        <h4 class="skill-name">Figma</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="78">
+                                    <span class="skill-percent">78%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: Canva -->
+                <div class="skill-card reveal-up" data-delay="300" data-category="design">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-palette2"></i>
+                        </div>
+                        <h4 class="skill-name">Canva</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="82">
+                                    <span class="skill-percent">82%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill: Chrome DevTools -->
+                <div class="skill-card reveal-up" data-delay="350" data-category="tools">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="bi bi-bug"></i>
+                        </div>
+                        <h4 class="skill-name">Chrome DevTools</h4>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="86">
+                                    <span class="skill-percent">86%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- ========== SERVICES SECTION ========== -->
+    <!-- ======================================== -->
+    <section id="services" class="section services-section" aria-label="Services">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center">
+                <span class="section-tag reveal-up">
+                    <i class="bi bi-gear"></i>
+                    What I Offer
+                </span>
+                <h2 class="section-title reveal-up" data-delay="100">
+                    My <span class="text-gradient">Services</span>
+                </h2>
+                <p class="section-subtitle reveal-up" data-delay="200">
+                    Comprehensive digital solutions tailored to elevate your brand and user experience.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Service Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card reveal-up" data-delay="100">
+                        <div class="service-card-number">01</div>
+                        <div class="service-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <h3 class="service-title">Custom Website Development</h3>
+                        <p class="service-description">
+                            Building fully custom websites from scratch using clean, semantic code.
+                            Every site is tailored to your brand, goals, and audience for maximum impact.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="bi bi-check2"></i> Hand-Coded Solutions</li>
+                            <li><i class="bi bi-check2"></i> Semantic HTML & Clean CSS</li>
+                            <li><i class="bi bi-check2"></i> Cross-Browser Compatibility</li>
+                        </ul>
+                        <a href="#contact" class="service-link">
+                            Learn More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card featured reveal-up" data-delay="200">
+                        <div class="service-card-number">02</div>
+                        <div class="service-icon">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h3 class="service-title">Responsive Web Design</h3>
+                        <p class="service-description">
+                            Designing websites that look flawless on every screen size — from mobile
+                            phones to ultra-wide desktops — using a mobile-first approach.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="bi bi-check2"></i> Mobile-First Approach</li>
+                            <li><i class="bi bi-check2"></i> Fluid Layouts & Grids</li>
+                            <li><i class="bi bi-check2"></i> Touch-Friendly Interfaces</li>
+                        </ul>
+                        <a href="#contact" class="service-link">
+                            Learn More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card reveal-up" data-delay="300">
+                        <div class="service-card-number">03</div>
+                        <div class="service-icon">
+                            <i class="bi bi-rocket-takeoff"></i>
+                        </div>
+                        <h3 class="service-title">Landing Page Development</h3>
+                        <p class="service-description">
+                            Creating high-converting, visually stunning landing pages designed to capture
+                            leads, showcase products, and drive user action effectively.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="bi bi-check2"></i> Conversion-Focused Design</li>
+                            <li><i class="bi bi-check2"></i> Fast Load Times</li>
+                            <li><i class="bi bi-check2"></i> Call-to-Action Optimization</li>
+                        </ul>
+                        <a href="#contact" class="service-link">
+                            Learn More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card reveal-up" data-delay="100">
+                        <div class="service-card-number">04</div>
+                        <div class="service-icon">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
+                        <h3 class="service-title">Portfolio Website Development</h3>
+                        <p class="service-description">
+                            Crafting premium, personalized portfolio websites that showcase your work,
+                            skills, and achievements in a professional and memorable way.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="bi bi-check2"></i> Personal Branding</li>
+                            <li><i class="bi bi-check2"></i> Project Showcases</li>
+                            <li><i class="bi bi-check2"></i> Interactive Animations</li>
+                        </ul>
+                        <a href="#contact" class="service-link">
+                            Learn More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card reveal-up" data-delay="200">
+                        <div class="service-card-number">05</div>
+                        <div class="service-icon">
+                            <i class="bi bi-speedometer2"></i>
+                        </div>
+                        <h3 class="service-title">Website Optimization</h3>
+                        <p class="service-description">
+                            Improving website speed, performance, and SEO to ensure fast load times,
+                            better search rankings, and an enhanced overall user experience.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="bi bi-check2"></i> Page Speed Optimization</li>
+                            <li><i class="bi bi-check2"></i> SEO Best Practices</li>
+                            <li><i class="bi bi-check2"></i> Image & Code Optimization</li>
+                        </ul>
+                        <a href="#contact" class="service-link">
+                            Learn More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card reveal-up" data-delay="300">
+                        <div class="service-card-number">06</div>
+                        <div class="service-icon">
+                            <i class="bi bi-wrench-adjustable"></i>
+                        </div>
+                        <h3 class="service-title">Website Maintenance & Bug Fixes</h3>
+                        <p class="service-description">
+                            Providing ongoing maintenance, updates, and bug fixes to keep your website
+                            running smoothly, securely, and up-to-date at all times.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="bi bi-check2"></i> Regular Updates</li>
+                            <li><i class="bi bi-check2"></i> Bug Fixing & Debugging</li>
+                            <li><i class="bi bi-check2"></i> Security Patches</li>
+                        </ul>
+                        <a href="#contact" class="service-link">
+                            Learn More <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- ========== PROJECTS SECTION ========== -->
+    <!-- ======================================== -->
+    <section id="projects" class="section projects-section" aria-label="Featured Projects">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center">
+                <span class="section-tag reveal-up">
+                    <i class="bi bi-folder"></i>
+                    My Portfolio
+                </span>
+                <h2 class="section-title reveal-up" data-delay="100">
+                    Featured <span class="text-gradient">Projects</span>
+                </h2>
+                <p class="section-subtitle reveal-up" data-delay="200">
+                    A curated selection of my recent work — from concept to deployment.
+                </p>
+            </div>
+
+            <!-- Project Filter -->
+            <div class="project-filters reveal-up" data-delay="300">
+                <button class="project-filter active" data-filter="all">All Projects</button>
+                <button class="project-filter" data-filter="web">Web Apps</button>
+                <button class="project-filter" data-filter="landing">Landing Pages</button>
+                <button class="project-filter" data-filter="portfolio">Portfolios</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- ====================================================
+                     PROJECT CARD 1
+                     Replace: title, description, tech stack, GitHub & demo links, image
+                     ==================================================== -->
+                <div class="col-project" data-category="web">
+                    <article class="project-card reveal-up" data-delay="100">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <i class="bi bi-image"></i>
+                                <!-- Replace with: <img src="assets/images/project-1.jpg" alt="Project Name" loading="lazy"> -->
+                                <span>Project Screenshot</span>
+                            </div>
+                            <div class="project-image-overlay">
+                                <div class="project-overlay-actions">
+                                    <!-- UPDATE: Replace href with your GitHub repo link -->
+                                    <a href="https://github.com/amirhamzamarjan/ecommerce-starter" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="View on GitHub">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                    <!-- UPDATE: Replace href with your live demo link -->
+                                    <a href="https://ecommerce-starter-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="Live Demo">
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Web Application</div>
+                            <!-- UPDATE: Replace with your project name -->
+                            <h3 class="project-title">E-Commerce Starter Kit</h3>
+                            <!-- UPDATE: Replace with your project description -->
+                            <p class="project-description">
+                                A modern e-commerce starter template with product listings, shopping cart,
+                                responsive layout, and clean checkout flow built for small businesses.
+                            </p>
+                            <!-- UPDATE: Replace with your project tech stack -->
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/amirhamzamarjan/ecommerce-starter" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-custom">
+                                    <i class="bi bi-github"></i> GitHub
+                                </a>
+                                <a href="https://ecommerce-starter-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary-custom">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ====================================================
+                     PROJECT CARD 2
+                     Replace: title, description, tech stack, GitHub & demo links, image
+                     ==================================================== -->
+                <div class="col-project" data-category="landing">
+                    <article class="project-card reveal-up" data-delay="200">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <i class="bi bi-image"></i>
+                                <!-- Replace with: <img src="assets/images/project-2.jpg" alt="Project Name" loading="lazy"> -->
+                                <span>Project Screenshot</span>
+                            </div>
+                            <div class="project-image-overlay">
+                                <div class="project-overlay-actions">
+                                    <a href="https://github.com/amirhamzamarjan/agency-landing" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="View on GitHub">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                    <a href="https://agency-landing-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="Live Demo">
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Landing Page</div>
+                            <h3 class="project-title">Digital Agency Landing Page</h3>
+                            <p class="project-description">
+                                A sleek, conversion-focused landing page for a digital agency featuring
+                                smooth animations, service showcases, and a professional contact section.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/amirhamzamarjan/agency-landing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-custom">
+                                    <i class="bi bi-github"></i> GitHub
+                                </a>
+                                <a href="https://agency-landing-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary-custom">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ====================================================
+                     PROJECT CARD 3
+                     Replace: title, description, tech stack, GitHub & demo links, image
+                     ==================================================== -->
+                <div class="col-project" data-category="portfolio">
+                    <article class="project-card reveal-up" data-delay="300">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <i class="bi bi-image"></i>
+                                <!-- Replace with: <img src="assets/images/project-3.jpg" alt="Project Name" loading="lazy"> -->
+                                <span>Project Screenshot</span>
+                            </div>
+                            <div class="project-image-overlay">
+                                <div class="project-overlay-actions">
+                                    <a href="https://github.com/amirhamzamarjan/photographer-portfolio" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="View on GitHub">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                    <a href="https://photographer-portfolio-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="Live Demo">
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Portfolio</div>
+                            <h3 class="project-title">Photographer Portfolio</h3>
+                            <p class="project-description">
+                                A visually immersive portfolio website for a photographer with image galleries,
+                                lightbox effects, smooth transitions, and a fully responsive design.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/amirhamzamarjan/photographer-portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-custom">
+                                    <i class="bi bi-github"></i> GitHub
+                                </a>
+                                <a href="https://photographer-portfolio-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary-custom">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ====================================================
+                     PROJECT CARD 4
+                     Replace: title, description, tech stack, GitHub & demo links, image
+                     ==================================================== -->
+                <div class="col-project" data-category="web">
+                    <article class="project-card reveal-up" data-delay="100">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <i class="bi bi-image"></i>
+                                <!-- Replace with: <img src="assets/images/project-4.jpg" alt="Project Name" loading="lazy"> -->
+                                <span>Project Screenshot</span>
+                            </div>
+                            <div class="project-image-overlay">
+                                <div class="project-overlay-actions">
+                                    <a href="https://github.com/amirhamzamarjan/task-manager-app" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="View on GitHub">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                    <a href="https://task-manager-app-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="Live Demo">
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Web Application</div>
+                            <h3 class="project-title">Task Manager App</h3>
+                            <p class="project-description">
+                                A full-featured task management web application with CRUD operations,
+                                drag-and-drop functionality, priority sorting, and local storage persistence.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">LocalStorage</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/amirhamzamarjan/task-manager-app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-custom">
+                                    <i class="bi bi-github"></i> GitHub
+                                </a>
+                                <a href="https://task-manager-app-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary-custom">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ====================================================
+                     PROJECT CARD 5
+                     Replace: title, description, tech stack, GitHub & demo links, image
+                     ==================================================== -->
+                <div class="col-project" data-category="landing">
+                    <article class="project-card reveal-up" data-delay="200">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <i class="bi bi-image"></i>
+                                <!-- Replace with: <img src="assets/images/project-5.jpg" alt="Project Name" loading="lazy"> -->
+                                <span>Project Screenshot</span>
+                            </div>
+                            <div class="project-image-overlay">
+                                <div class="project-overlay-actions">
+                                    <a href="https://github.com/amirhamzamarjan/restaurant-website" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="View on GitHub">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                    <a href="https://restaurant-website-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="Live Demo">
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Landing Page</div>
+                            <h3 class="project-title">Restaurant Website</h3>
+                            <p class="project-description">
+                                An elegant restaurant landing page with animated menu sections, reservation
+                                form, responsive gallery, and a warm, inviting visual design.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/amirhamzamarjan/restaurant-website" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-custom">
+                                    <i class="bi bi-github"></i> GitHub
+                                </a>
+                                <a href="https://restaurant-website-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary-custom">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ====================================================
+                     PROJECT CARD 6
+                     Replace: title, description, tech stack, GitHub & demo links, image
+                     ==================================================== -->
+                <div class="col-project" data-category="portfolio">
+                    <article class="project-card reveal-up" data-delay="300">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <i class="bi bi-image"></i>
+                                <!-- Replace with: <img src="assets/images/project-6.jpg" alt="Project Name" loading="lazy"> -->
+                                <span>Project Screenshot</span>
+                            </div>
+                            <div class="project-image-overlay">
+                                <div class="project-overlay-actions">
+                                    <a href="https://github.com/amirhamzamarjan/developer-portfolio" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="View on GitHub">
+                                        <i class="bi bi-github"></i>
+                                    </a>
+                                    <a href="https://developer-portfolio-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="project-action-btn" aria-label="Live Demo">
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Portfolio</div>
+                            <h3 class="project-title">Developer Portfolio Template</h3>
+                            <p class="project-description">
+                                A premium dark-themed developer portfolio with smooth scroll animations,
+                                glassmorphism design, and a fully responsive layout built from scratch.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/amirhamzamarjan/developer-portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-custom">
+                                    <i class="bi bi-github"></i> GitHub
+                                </a>
+                                <a href="https://developer-portfolio-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary-custom">
+                                    <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- View All Button -->
+            <div class="text-center mt-5 reveal-up">
+                <a href="https://github.com/amirhamzamarjan" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-lg">
+                    <span>View All Projects</span>
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- ========== EXPERIENCE SECTION ========== -->
+    <!-- ============================================== -->
+    <section id="experience" class="section experience-section" aria-label="Experience & Education">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center">
+                <span class="section-tag reveal-up">
+                    <i class="bi bi-briefcase"></i>
+                    My Journey
+                </span>
+                <h2 class="section-title reveal-up" data-delay="100">
+                    Experience & <span class="text-gradient">Education</span>
+                </h2>
+                <p class="section-subtitle reveal-up" data-delay="200">
+                    A timeline of my professional experience and academic background.
+                </p>
+            </div>
+
+            <div class="row g-5">
+                <!-- Work Experience Column -->
+                <div class="col-lg-6">
+                    <h3 class="timeline-heading reveal-left">
+                        <i class="bi bi-briefcase-fill"></i> Work Experience
+                    </h3>
+                    <div class="timeline">
+                        <!-- Timeline Item 1 — Web Developer at InformixBD -->
+                        <div class="timeline-item reveal-left" data-delay="100">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-date">
+                                    <i class="bi bi-calendar3"></i> January 2022 — Present
+                                </div>
+                                <h4 class="timeline-title">Web Developer</h4>
+                                <p class="timeline-company">
+                                    <i class="bi bi-building"></i> InformixBD
+                                </p>
+                                <p class="timeline-description">
+                                    Develop and maintain client websites. Build responsive and modern user
+                                    interfaces. Convert UI/UX designs into functional websites. Handle frontend
+                                    development for client projects. Optimize website performance and user experience.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2 — Web Development Intern at Creative IT Institute -->
+                        <div class="timeline-item reveal-left" data-delay="200">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-date">
+                                    <i class="bi bi-calendar3"></i> May 2026 — Present
+                                </div>
+                                <h4 class="timeline-title">Web Development Intern</h4>
+                                <p class="timeline-company">
+                                    <i class="bi bi-building"></i> Creative IT Institute
+                                </p>
+                                <p class="timeline-description">
+                                    Work on real-world web development projects. Build responsive interfaces.
+                                    Improve frontend development skills. Collaborate with mentors and team members.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span>React.js</span>
+                                    <span>Tailwind CSS</span>
+                                    <span>Node.js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Column -->
+                <div class="col-lg-6" id="education">
+                    <h3 class="timeline-heading reveal-right">
+                        <i class="bi bi-mortarboard-fill"></i> Education
+                    </h3>
+                    <div class="timeline">
+                        <!-- Education Item — Diploma in Computer Science & Technology -->
+                        <div class="timeline-item reveal-right" data-delay="100">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card">
+                                <div class="timeline-date">
+                                    <i class="bi bi-calendar3"></i> Currently Pursuing
+                                </div>
+                                <h4 class="timeline-title">Diploma in Computer Science & Technology</h4>
+                                <p class="timeline-description">
+                                    Focused on web technologies, programming fundamentals, software
+                                    development, and computer science principles. Building a strong
+                                    academic foundation alongside real-world professional experience.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span>Computer Science</span>
+                                    <span>Web Technologies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================ -->
+    <!-- ========== CERTIFICATES SECTION ========== -->
+    <!-- ================================================ -->
+    <section id="certificates" class="section certificates-section" aria-label="Certificates">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center">
+                <span class="section-tag reveal-up">
+                    <i class="bi bi-award"></i>
+                    Achievements
+                </span>
+                <h2 class="section-title reveal-up" data-delay="100">
+                    Licenses & <span class="text-gradient">Certificates</span>
+                </h2>
+                <p class="section-subtitle reveal-up" data-delay="200">
+                    Professional certifications and credentials that validate my expertise.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- ====================================================
+                     CERTIFICATE 1 — Replace title, issuer, date, ID, link
+                     ==================================================== -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="certificate-card reveal-up" data-delay="100">
+                        <div class="certificate-badge">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <h4 class="certificate-title">Meta Frontend Developer Professional Certificate</h4>
+                        <p class="certificate-issuer">
+                            <i class="bi bi-building"></i> Meta (Coursera)
+                        </p>
+                        <p class="certificate-date">
+                            <i class="bi bi-calendar3"></i> Issued: January 2024
+                        </p>
+                        <p class="certificate-id">
+                            <!-- UPDATE: Replace with real credential ID --> Credential ID: XXXXXXXXXX
+                        </p>
+                        <a href="#" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                            View Certificate <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ====================================================
+                     CERTIFICATE 2 — Replace title, issuer, date, ID, link
+                     ==================================================== -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="certificate-card reveal-up" data-delay="200">
+                        <div class="certificate-badge">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <h4 class="certificate-title">JavaScript Algorithms and Data Structures</h4>
+                        <p class="certificate-issuer">
+                            <i class="bi bi-building"></i> freeCodeCamp
+                        </p>
+                        <p class="certificate-date">
+                            <i class="bi bi-calendar3"></i> Issued: March 2023
+                        </p>
+                        <p class="certificate-id">
+                            <!-- UPDATE: Replace with real credential ID --> Credential ID: XXXXXXXXXX
+                        </p>
+                        <a href="#" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                            View Certificate <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ====================================================
+                     CERTIFICATE 3 — Replace title, issuer, date, ID, link
+                     ==================================================== -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="certificate-card reveal-up" data-delay="300">
+                        <div class="certificate-badge">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <h4 class="certificate-title">Responsive Web Design Certification</h4>
+                        <p class="certificate-issuer">
+                            <i class="bi bi-building"></i> freeCodeCamp
+                        </p>
+                        <p class="certificate-date">
+                            <i class="bi bi-calendar3"></i> Issued: November 2022
+                        </p>
+                        <p class="certificate-id">
+                            <!-- UPDATE: Replace with real credential ID --> Credential ID: XXXXXXXXXX
+                        </p>
+                        <a href="#" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                            View Certificate <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ====================================================
+                     CERTIFICATE 4 — Replace title, issuer, date, ID, link
+                     ==================================================== -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="certificate-card reveal-up" data-delay="100">
+                        <div class="certificate-badge">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <h4 class="certificate-title">Google UX Design Professional Certificate</h4>
+                        <p class="certificate-issuer">
+                            <i class="bi bi-building"></i> Google (Coursera)
+                        </p>
+                        <p class="certificate-date">
+                            <i class="bi bi-calendar3"></i> Issued: July 2023
+                        </p>
+                        <p class="certificate-id">
+                            Credential ID: AMET901234
+                        </p>
+                        <a href="#" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                            View Certificate <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ====================================================
+                     CERTIFICATE 5 — Replace title, issuer, date, ID, link
+                     ==================================================== -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="certificate-card reveal-up" data-delay="200">
+                        <div class="certificate-badge">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <h4 class="certificate-title">Advanced CSS and Sass: Flexbox, Grid, Animations</h4>
+                        <p class="certificate-issuer">
+                            <i class="bi bi-building"></i> Udemy
+                        </p>
+                        <p class="certificate-date">
+                            <i class="bi bi-calendar3"></i> Issued: September 2022
+                        </p>
+                        <p class="certificate-id">
+                            Credential ID: CONSEC567890
+                        </p>
+                        <a href="#" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                            View Certificate <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ====================================================
+                     CERTIFICATE 6 — Replace title, issuer, date, ID, link
+                     ==================================================== -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="certificate-card reveal-up" data-delay="300">
+                        <div class="certificate-badge">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <h4 class="certificate-title">The Complete JavaScript Course 2024</h4>
+                        <p class="certificate-issuer">
+                            <i class="bi bi-building"></i> Udemy
+                        </p>
+                        <p class="certificate-date">
+                            <i class="bi bi-calendar3"></i> Issued: February 2024
+                        </p>
+                        <p class="certificate-id">
+                            Credential ID: ADIPIS123789
+                        </p>
+                        <a href="#" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                            View Certificate <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <!-- ================================================= -->
+    <section id="testimonials" class="section testimonials-section" aria-label="Testimonials">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center">
+                <span class="section-tag reveal-up">
+                    <i class="bi bi-chat-quote"></i>
+                    Client Reviews
+                </span>
+                <h2 class="section-title reveal-up" data-delay="100">
+                    What Clients <span class="text-gradient">Say</span>
+                </h2>
+                <p class="section-subtitle reveal-up" data-delay="200">
+                    Hear from the people I've had the pleasure of working with.
+                </p>
+            </div>
+
+            <!-- Testimonials Carousel -->
+            <div class="testimonials-carousel reveal-up" data-delay="300">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <!-- Testimonial Card 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Amir delivered a stunning website for our business that exceeded all expectations. His attention to detail, clean code, and ability to translate our vision into a polished product was remarkable. Highly recommended for anyone looking for a professional web developer!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                            <div class="testimonial-author-info">
+                                <!-- UPDATE: Replace with real client name & role -->
+                                <h5 class="testimonial-author-name">Client Name</h5>
+                                <p class="testimonial-author-role">CEO, Company Name</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Card 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Working with Amir was a fantastic experience. He built our landing page from scratch with pixel-perfect design, smooth animations, and a fully responsive layout. He delivered ahead of schedule and communicated clearly throughout the project."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                            <div class="testimonial-author-info">
+                                <!-- UPDATE: Replace with real client name & role -->
+                                <h5 class="testimonial-author-name">Client Name</h5>
+                                <p class="testimonial-author-role">Founder, Startup Name</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Card 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Amir redesigned our entire website and the results were outstanding. The site loads faster, looks modern, and our users love the new interface. His technical skills and creative eye make him a standout web developer."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                            <div class="testimonial-author-info">
+                                <!-- UPDATE: Replace with real client name & role -->
+                                <h5 class="testimonial-author-name">Client Name</h5>
+                                <p class="testimonial-author-role">Project Manager, Agency Name</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Card 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Professional, creative, and incredibly dedicated. Amir built our portfolio website with beautiful animations and flawless responsiveness. He is always open to feedback and delivers pixel-perfect results every single time. A pleasure to work with!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                            <div class="testimonial-author-info">
+                                <!-- UPDATE: Replace with real client name & role -->
+                                <h5 class="testimonial-author-name">Client Name</h5>
+                                <p class="testimonial-author-role">Creative Director, Studio Name</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="testimonials-controls">
+                    <button class="testimonial-btn testimonial-prev" id="testimonialPrev" aria-label="Previous testimonial">
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                    <button class="testimonial-btn testimonial-next" id="testimonialNext" aria-label="Next testimonial">
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- ========== FAQ SECTION ========== -->
+    <!-- ======================================== -->
+    <section id="faq" class="section faq-section" aria-label="Frequently Asked Questions">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center">
+                <span class="section-tag reveal-up">
+                    <i class="bi bi-question-circle"></i>
+                    Have Questions?
+                </span>
+                <h2 class="section-title reveal-up" data-delay="100">
+                    Frequently Asked <span class="text-gradient">Questions</span>
+                </h2>
+                <p class="section-subtitle reveal-up" data-delay="200">
+                    Answers to the most common questions I receive about my work and process.
+                </p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-accordion" id="faqAccordion">
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item reveal-up" data-delay="100">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>What technologies do you work with?</span>
+                                <div class="faq-icon">
+                                    <i class="bi bi-plus-lg"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    I work with a wide range of modern web technologies. On the frontend, I use HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS, and React.js. For backend basics, I have experience with PHP, Node.js, Express.js, and MySQL. I also use tools like Git, GitHub, VS Code, Figma, Canva, and Chrome DevTools to streamline my workflow.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item reveal-up" data-delay="150">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>How long does it take to build a website?</span>
+                                <div class="faq-icon">
+                                    <i class="bi bi-plus-lg"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    It depends on the complexity and scope of the project. A simple landing page typically takes 3–5 days, while a multi-page website or web application can take 2–4 weeks. I always provide a clear timeline estimate after understanding your requirements during the initial discussion.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item reveal-up" data-delay="200">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Do you provide website maintenance after delivery?</span>
+                                <div class="faq-icon">
+                                    <i class="bi bi-plus-lg"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Yes, I offer ongoing website maintenance and support services. This includes bug fixes, content updates, performance monitoring, and minor feature additions. I want to make sure your website continues to run smoothly and stays up-to-date long after the initial launch.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="faq-item reveal-up" data-delay="250">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>What is your process for working with clients?</span>
+                                <div class="faq-icon">
+                                    <i class="bi bi-plus-lg"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    My process starts with understanding your requirements and goals. Then I create a design mockup or wireframe for your approval. Once approved, I build the website with clean, responsive code and share progress updates regularly via email or messaging. After final review and revisions, I deliver the completed project and provide support.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="faq-item reveal-up" data-delay="300">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>How much do you charge for a website?</span>
+                                <div class="faq-icon">
+                                    <i class="bi bi-plus-lg"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Pricing varies based on the type, complexity, and scope of the project. I offer both fixed project-based pricing and flexible hourly rates. After discussing your requirements, I provide a detailed and transparent quote so there are no surprises. Feel free to reach out for a free consultation.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 6 -->
+                        <div class="faq-item reveal-up" data-delay="350">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Can you work with clients remotely?</span>
+                                <div class="faq-icon">
+                                    <i class="bi bi-plus-lg"></i>
+                                </div>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Absolutely! I work with clients from around the world and am fully comfortable with remote collaboration. I communicate through email, video calls, and messaging platforms to ensure smooth project progress. I am flexible with time zones and always available to discuss your project needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- ========== CONTACT SECTION ========== -->
+    <!-- ======================================== -->
+    <section id="contact" class="section contact-section" aria-label="Contact">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center">
+                <span class="section-tag reveal-up">
+                    <i class="bi bi-envelope"></i>
+                    Get In Touch
+                </span>
+                <h2 class="section-title reveal-up" data-delay="100">
+                    Let's Work <span class="text-gradient">Together</span>
+                </h2>
+                <p class="section-subtitle reveal-up" data-delay="200">
+                    Have a project in mind? Let's discuss how I can help bring your vision to life.
+                </p>
+            </div>
+
+            <div class="row g-5">
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <h3 class="contact-info-title reveal-left">
+                            Let's create something <span class="text-gradient">amazing</span> together.
+                        </h3>
+                        <p class="contact-info-text reveal-left" data-delay="100">
+                            I'm always excited to work on new projects and collaborate with amazing people.
+                            Feel free to reach out — let's turn your ideas into reality.
+                        </p>
+
+                        <!-- Contact Details -->
+                        <div class="contact-details">
+                            <div class="contact-detail-item reveal-left" data-delay="200">
+                                <div class="contact-detail-icon">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <div class="contact-detail-content">
+                                    <span class="contact-detail-label">Email Me</span>
+                                    <a href="mailto:amirhamzamarjan@gmail.com" class="contact-detail-value">amirhamzamarjan@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item reveal-left" data-delay="300">
+                                <div class="contact-detail-icon">
+                                    <i class="bi bi-phone-fill"></i>
+                                </div>
+                                <div class="contact-detail-content">
+                                    <span class="contact-detail-label">Call Me</span>
+                                    <a href="tel:+8801849485558" class="contact-detail-value">01849485558</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item reveal-left" data-delay="400">
+                                <div class="contact-detail-icon">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <div class="contact-detail-content">
+                                    <span class="contact-detail-label">Location</span>
+                                    <span class="contact-detail-value">Uttara, Dhaka, Bangladesh</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="contact-socials reveal-left" data-delay="500">
+                            <a href="https://github.com/amirhamzamarjan" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/amir-hamza-marjan/" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <!-- UPDATE: Replace href with your X (Twitter) profile link -->
+                            <a href="https://twitter.com/username" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="Twitter / X">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <!-- UPDATE: Replace href with your Instagram profile link -->
+                            <a href="https://instagram.com/username" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <form class="contact-form reveal-right" id="contactForm" novalidate>
+                        <div class="row g-4">
+                            <!-- Name Field -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="contactName" class="form-label">Your Name <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="bi bi-person input-icon"></i>
+                                        <input
+                                            type="text"
+                                            class="form-control custom-input"
+                                            id="contactName"
+                                            name="name"
+                                            placeholder="John Doe"
+                                            required
+                                            autocomplete="name"
+                                        >
+                                    </div>
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="contactEmail" class="form-label">Your Email <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="bi bi-envelope input-icon"></i>
+                                        <input
+                                            type="email"
+                                            class="form-control custom-input"
+                                            id="contactEmail"
+                                            name="email"
+                                            placeholder="john@example.com"
+                                            required
+                                            autocomplete="email"
+                                        >
+                                    </div>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                            </div>
+
+                            <!-- Subject Field -->
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="contactSubject" class="form-label">Subject <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="bi bi-chat-dots input-icon"></i>
+                                        <input
+                                            type="text"
+                                            class="form-control custom-input"
+                                            id="contactSubject"
+                                            name="subject"
+                                            placeholder="Project Inquiry"
+                                            required
+                                        >
+                                    </div>
+                                    <div class="invalid-feedback">Please enter a subject.</div>
+                                </div>
+                            </div>
+
+                            <!-- Message Field -->
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="contactMessage" class="form-label">Message <span class="required">*</span></label>
+                                    <div class="input-wrapper textarea-wrapper">
+                                        <i class="bi bi-pencil input-icon"></i>
+                                        <textarea
+                                            class="form-control custom-input custom-textarea"
+                                            id="contactMessage"
+                                            name="message"
+                                            rows="6"
+                                            placeholder="Tell me about your project..."
+                                            required
+                                        ></textarea>
+                                    </div>
+                                    <div class="invalid-feedback">Please enter your message.</div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary-custom btn-lg btn-submit w-100">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-loading" style="display: none;">
+                                        <span class="spinner"></span> Sending...
+                                    </span>
+                                    <i class="bi bi-send"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Form Status Messages -->
+                        <div class="form-status" id="formStatus" style="display: none;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- ========== FOOTER ========== -->
+    <!-- ======================================== -->
+    <footer class="footer-section" aria-label="Footer">
+        <div class="footer-glow" aria-hidden="true"></div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="row g-5">
+                    <!-- Footer About -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-about">
+                            <a href="#hero" class="footer-logo">
+                                <span class="logo-bracket">{</span>
+                                <span class="logo-text">&lt;H/&gt;</span>
+                                <span class="logo-bracket">}</span>
+                            </a>
+                            <p class="footer-about-text">
+                                Web Developer crafting modern, responsive, and high-performing websites.
+                                Passionate about clean code, beautiful design, and delivering digital
+                                experiences that make a lasting impact.
+                            </p>
+                            <div class="footer-socials">
+                                <a href="https://github.com/amirhamzamarjan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/amir-hamza-marjan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                                <!-- UPDATE: Replace href with your X (Twitter) profile link -->
+                                <a href="https://twitter.com/username" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+                                    <i class="bi bi-twitter-x"></i>
+                                </a>
+                                <!-- UPDATE: Replace href with your Instagram profile link -->
+                                <a href="https://instagram.com/username" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-links">
+                            <h4 class="footer-heading">Quick Links</h4>
+                            <ul>
+                                <li><a href="#hero">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#skills">Skills</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- More Links -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-links">
+                            <h4 class="footer-heading">Explore</h4>
+                            <ul>
+                                <li><a href="#experience">Experience</a></li>
+                                <li><a href="#certificates">Certificates</a></li>
+                                <li><a href="#testimonials">Testimonials</a></li>
+                                <li><a href="#faq">FAQ</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter / Contact -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-contact">
+                            <h4 class="footer-heading">Get In Touch</h4>
+                            <div class="footer-contact-item">
+                                <i class="bi bi-envelope-fill"></i>
+                                <a href="mailto:amirhamzamarjan@gmail.com">amirhamzamarjan@gmail.com</a>
+                            </div>
+                            <div class="footer-contact-item">
+                                <i class="bi bi-phone-fill"></i>
+                                <a href="tel:+8801849485558">01849485558</a>
+                            </div>
+                            <div class="footer-contact-item">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>Uttara, Dhaka, Bangladesh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Divider -->
+            <div class="footer-divider"></div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">
+                            &copy; <span id="currentYear"></span> MD. Amir Hamza Marjan. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p class="footer-credit">
+                            Designed & Developed by
+                            <a href="#hero" class="text-gradient">MD. Amir Hamza Marjan</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- ========== BACK TO TOP BUTTON ========== -->
+    <!-- ============================================ -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- ========== Bootstrap 5 JS ========== -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========== Custom JS ========== -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

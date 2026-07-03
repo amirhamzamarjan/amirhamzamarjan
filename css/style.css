@@ -1,6 +1,6 @@
 /* ============================================================
    PREMIUM PORTFOLIO — style.css
-   Author: Lorem Ipsum
+   Author: MD. Amir Hamza Marjan
    Description: Dark luxury portfolio with glassmorphism,
                 gradient lighting, and premium animations.
    ============================================================ */
@@ -2913,7 +2913,7 @@ a.contact-detail-value:hover {
         display: none;
     }
 
-    /* Hide custom cursor on tablets */
+    /* Hide custom cursor on touch devices */
     .custom-cursor,
     .custom-cursor-dot {
         display: none;
@@ -2940,22 +2940,40 @@ a.contact-detail-value:hover {
         justify-content: center;
     }
 
-    /* Hero */
+    /* Hero — center image on stacked layout */
     .hero-name {
         font-size: clamp(2.5rem, 5vw, 4rem);
     }
 
+    .hero-image-wrapper {
+        max-width: 320px;
+        margin: var(--space-5) auto 0;
+    }
+
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .hero-float-card {
+        display: none;
+    }
+
     .hero-stats {
         gap: var(--space-3);
+        justify-content: flex-start;
     }
 
     .hero-stat-number {
         font-size: 2rem;
     }
 
+    .hero-scroll-indicator {
+        display: none;
+    }
+
     /* About */
     .about-image-wrapper {
-        max-width: 380px;
+        max-width: 340px;
         margin: 0 auto var(--space-5);
     }
 
@@ -2970,9 +2988,21 @@ a.contact-detail-value:hover {
         font-size: 1.6rem;
     }
 
+    .about-image-pattern {
+        bottom: -10px;
+        right: -10px;
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
     /* Projects grid */
     .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
 
     /* Testimonials */
@@ -2987,14 +3017,25 @@ a.contact-detail-value:hover {
     /* Contact form */
     .contact-form {
         padding: var(--space-4);
+        margin-top: var(--space-5);
+    }
+
+    /* Footer */
+    .footer-top .col-lg-2,
+    .footer-top .col-lg-3 {
+        margin-top: var(--space-4);
+    }
+
+    .footer-about-text {
+        max-width: 100%;
     }
 }
 
 
 /* =====================================================
-   26. RESPONSIVE — MOBILE (≤575px)
+   25b. RESPONSIVE — TABLET PORTRAIT (≤767px)
    ===================================================== */
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
     .section {
         padding: var(--space-8) 0;
     }
@@ -3004,104 +3045,114 @@ a.contact-detail-value:hover {
     }
 
     .section-title {
-        font-size: 1.8rem;
+        font-size: clamp(1.6rem, 5vw, 2.2rem);
     }
 
-    /* Hero */
-    .hero-name {
-        font-size: 2.5rem;
-    }
-
-    .hero-greeting {
+    .section-subtitle {
         font-size: 0.95rem;
     }
 
+    /* Hero */
+    .hero-section {
+        min-height: auto;
+        padding-top: var(--space-12);
+        padding-bottom: var(--space-8);
+    }
+
+    .hero-name {
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
+    }
+
     .hero-subtitle {
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
 
     .hero-description {
-        font-size: 0.92rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-badge {
+        font-size: 0.72rem;
+        padding: 5px 12px;
     }
 
     .hero-cta {
-        flex-direction: column;
+        margin-bottom: var(--space-5);
     }
 
-    .hero-cta .btn {
-        width: 100%;
-        justify-content: center;
+    .hero-image-wrapper {
+        max-width: 260px;
     }
 
     .hero-stats {
-        flex-direction: column;
         gap: var(--space-3);
-        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .hero-stat-number {
+        font-size: 1.8rem;
+    }
+
+    .hero-stat-label {
+        font-size: 0.72rem;
     }
 
     .hero-stat-divider {
-        width: 48px;
-        height: 1px;
-    }
-
-    .hero-scroll-indicator {
-        display: none;
+        height: 36px;
     }
 
     /* About */
-    .about-info-grid {
-        grid-template-columns: 1fr;
+    .about-image-wrapper {
+        max-width: 280px;
     }
 
-    .about-cta {
-        flex-direction: column;
+    .about-heading {
+        font-size: 1.3rem;
     }
 
-    .about-cta .btn {
-        width: 100%;
-        justify-content: center;
+    .about-text {
+        font-size: 0.88rem;
     }
 
-    /* Skills grid */
-    .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: var(--space-2);
+    /* Services */
+    .service-card {
+        padding: var(--space-4) var(--space-3);
     }
 
-    .skills-tabs {
-        gap: 6px;
+    .service-card-number {
+        font-size: 2.2rem;
     }
 
-    .skills-tab {
-        padding: 8px var(--space-2);
-        font-size: 0.78rem;
-    }
-
-    /* Projects grid */
+    /* Projects */
     .projects-grid {
         grid-template-columns: 1fr;
-    }
-
-    .project-filters {
-        gap: 6px;
-    }
-
-    .project-filter {
-        padding: 8px var(--space-2);
-        font-size: 0.78rem;
+        gap: var(--space-3);
     }
 
     /* Timeline */
-    .timeline {
-        padding-left: var(--space-3);
-    }
-
-    .timeline-dot {
-        left: calc(-1 * var(--space-3) + 3px);
+    .timeline-heading {
+        font-size: 1.15rem;
     }
 
     .timeline-card {
-        padding: var(--space-2);
+        padding: var(--space-2) var(--space-3);
+    }
+
+    .timeline-title {
+        font-size: 0.95rem;
+    }
+
+    .timeline-description {
+        font-size: 0.82rem;
+    }
+
+    /* Certificates */
+    .certificate-card {
+        padding: var(--space-3);
+    }
+
+    .certificate-title {
+        font-size: 0.92rem;
     }
 
     /* Testimonials */
@@ -3113,19 +3164,596 @@ a.contact-detail-value:hover {
         font-size: 0.92rem;
     }
 
-    /* Contact form */
+    .testimonial-quote-icon {
+        font-size: 2rem;
+    }
+
+    .testimonial-avatar {
+        width: 44px;
+        height: 44px;
+    }
+
+    .testimonial-author-name {
+        font-size: 0.88rem;
+    }
+
+    .testimonial-author-role {
+        font-size: 0.75rem;
+    }
+
+    /* FAQ */
+    .faq-question {
+        font-size: 0.88rem;
+        padding: var(--space-2) var(--space-3);
+    }
+
+    .faq-answer p {
+        font-size: 0.85rem;
+        padding: 0 var(--space-3) var(--space-2);
+    }
+
+    /* Contact */
+    .contact-info-title {
+        font-size: 1.4rem;
+    }
+
+    .contact-info-text {
+        font-size: 0.88rem;
+    }
+
     .contact-form {
         padding: var(--space-3);
     }
 
-    /* Buttons */
-    .btn-primary-custom,
-    .btn-outline-custom {
+    .contact-socials {
+        flex-wrap: wrap;
+    }
+
+    /* Footer */
+    .footer-section {
+        padding-top: var(--space-8);
+    }
+
+    .footer-heading {
+        margin-top: var(--space-3);
+    }
+
+    .footer-links ul {
+        gap: 6px;
+    }
+}
+
+
+/* =====================================================
+   26. RESPONSIVE — MOBILE (≤575px)
+   ===================================================== */
+@media (max-width: 575.98px) {
+    .section {
+        padding: var(--space-6) 0;
+    }
+
+    .section-header {
+        margin-bottom: var(--space-5);
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 6vw, 1.8rem);
+    }
+
+    .section-subtitle {
+        font-size: 0.88rem;
+    }
+
+    .section-tag {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+
+    /* --- Hero --- */
+    .hero-section {
+        padding-top: var(--space-10);
+        padding-bottom: var(--space-6);
+    }
+
+    .hero-name {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+    }
+
+    .hero-greeting {
+        font-size: 0.88rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.92rem;
+        min-height: 1.6em;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .hero-badge {
+        font-size: 0.68rem;
+        padding: 4px 10px;
+        margin-bottom: var(--space-3);
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: var(--space-1);
+        margin-bottom: var(--space-5);
+    }
+
+    .hero-cta .btn,
+    .hero-cta .btn-primary-custom,
+    .hero-cta .btn-outline-custom {
+        width: 100%;
+        justify-content: center;
         padding: 12px var(--space-3);
         font-size: 0.85rem;
     }
 
-    /* Footer */
+    .hero-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+        justify-content: center;
+    }
+
+    .hero-stat {
+        min-width: 70px;
+    }
+
+    .hero-stat-number {
+        font-size: 1.6rem;
+    }
+
+    .hero-stat-label {
+        font-size: 0.68rem;
+    }
+
+    .hero-stat-divider {
+        width: 1px;
+        height: 32px;
+    }
+
+    .hero-image-wrapper {
+        max-width: 220px;
+    }
+
+    .hero-image-placeholder i {
+        font-size: 5rem;
+    }
+
+    /* --- About --- */
+    .about-image-wrapper {
+        max-width: 220px;
+        margin: 0 auto var(--space-4);
+    }
+
+    .about-experience-badge {
+        width: 72px;
+        height: 72px;
+        bottom: -8px;
+        right: -8px;
+    }
+
+    .about-exp-number {
+        font-size: 1.3rem;
+    }
+
+    .about-exp-text {
+        font-size: 0.55rem;
+    }
+
+    .about-image-placeholder i {
+        font-size: 4rem;
+    }
+
+    .about-image-pattern {
+        width: 60px;
+        height: 60px;
+        bottom: -8px;
+        right: -8px;
+    }
+
+    .about-heading {
+        font-size: 1.2rem;
+    }
+
+    .about-text {
+        font-size: 0.85rem;
+    }
+
+    .about-info-grid {
+        grid-template-columns: 1fr;
+        padding: var(--space-2);
+        gap: var(--space-1);
+    }
+
+    .about-info-label {
+        font-size: 0.68rem;
+    }
+
+    .about-info-value {
+        font-size: 0.82rem;
+    }
+
+    .about-cta {
+        flex-direction: column;
+        gap: var(--space-1);
+    }
+
+    .about-cta .btn,
+    .about-cta .btn-primary-custom,
+    .about-cta .btn-outline-custom {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* --- Skills --- */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: var(--space-2);
+    }
+
+    .skills-tabs {
+        gap: 6px;
+        justify-content: center;
+    }
+
+    .skills-tab {
+        padding: 7px 14px;
+        font-size: 0.72rem;
+    }
+
+    .skill-card {
+        padding: var(--space-2);
+    }
+
+    .skill-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .skill-name {
+        font-size: 0.88rem;
+    }
+
+    .skill-percent {
+        font-size: 0.65rem;
+        top: -20px;
+    }
+
+    /* --- Services --- */
+    .service-card {
+        padding: var(--space-3) var(--space-3);
+    }
+
+    .service-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+        margin-bottom: var(--space-2);
+    }
+
+    .service-title {
+        font-size: 1.05rem;
+    }
+
+    .service-description {
+        font-size: 0.82rem;
+    }
+
+    .service-features li {
+        font-size: 0.78rem;
+    }
+
+    .service-card-number {
+        font-size: 2rem;
+    }
+
+    .service-card.featured::after {
+        font-size: 0.65rem;
+        padding: 3px 10px;
+        top: var(--space-2);
+        right: var(--space-2);
+    }
+
+    /* --- Projects --- */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    .project-filters {
+        gap: 6px;
+        justify-content: center;
+    }
+
+    .project-filter {
+        padding: 7px 14px;
+        font-size: 0.72rem;
+    }
+
+    .project-content {
+        padding: var(--space-2) var(--space-3);
+    }
+
+    .project-title {
+        font-size: 1.05rem;
+    }
+
+    .project-description {
+        font-size: 0.82rem;
+    }
+
+    .tech-tag {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
+
+    .project-links {
+        flex-wrap: wrap;
+    }
+
+    .project-links .btn-sm {
+        font-size: 0.72rem;
+        padding: 6px 12px;
+    }
+
+    /* --- Timeline --- */
+    .timeline {
+        padding-left: var(--space-3);
+    }
+
+    .timeline-dot {
+        left: calc(-1 * var(--space-3) + 3px);
+        width: 8px;
+        height: 8px;
+    }
+
+    .timeline-card {
+        padding: var(--space-2);
+    }
+
+    .timeline-heading {
+        font-size: 1.05rem;
+    }
+
+    .timeline-date {
+        font-size: 0.68rem;
+    }
+
+    .timeline-title {
+        font-size: 0.92rem;
+    }
+
+    .timeline-company {
+        font-size: 0.78rem;
+    }
+
+    .timeline-description {
+        font-size: 0.78rem;
+    }
+
+    .timeline-tags span {
+        font-size: 0.62rem;
+        padding: 2px 8px;
+    }
+
+    /* --- Certificates --- */
+    .certificate-card {
+        padding: var(--space-3);
+    }
+
+    .certificate-badge {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .certificate-title {
+        font-size: 0.88rem;
+    }
+
+    .certificate-issuer,
+    .certificate-date {
+        font-size: 0.75rem;
+    }
+
+    .certificate-id {
+        font-size: 0.65rem;
+    }
+
+    .certificate-link {
+        font-size: 0.75rem;
+    }
+
+    /* --- Testimonials --- */
+    .testimonial-card {
+        padding: var(--space-4) var(--space-2);
+    }
+
+    .testimonial-text {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .testimonial-quote-icon {
+        font-size: 1.8rem;
+        margin-bottom: var(--space-1);
+    }
+
+    .testimonial-stars i {
+        font-size: 0.85rem;
+    }
+
+    .testimonial-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .testimonial-avatar i {
+        font-size: 1.1rem;
+    }
+
+    .testimonial-author-name {
+        font-size: 0.82rem;
+    }
+
+    .testimonial-author-role {
+        font-size: 0.7rem;
+    }
+
+    .testimonials-controls {
+        gap: var(--space-2);
+        margin-top: var(--space-3);
+    }
+
+    .testimonial-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+    }
+
+    .testimonial-dots .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .testimonial-dots .dot.active {
+        width: 22px;
+    }
+
+    /* --- FAQ --- */
+    .faq-question {
+        font-size: 0.82rem;
+        padding: var(--space-2);
+        gap: var(--space-1);
+    }
+
+    .faq-icon {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+    }
+
+    .faq-icon i {
+        font-size: 0.78rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.78rem;
+        padding: 0 var(--space-2) var(--space-2);
+        line-height: 1.7;
+    }
+
+    /* --- Contact --- */
+    .contact-info-title {
+        font-size: 1.25rem;
+    }
+
+    .contact-info-text {
+        font-size: 0.82rem;
+    }
+
+    .contact-detail-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 0.95rem;
+    }
+
+    .contact-detail-label {
+        font-size: 0.65rem;
+    }
+
+    .contact-detail-value {
+        font-size: 0.82rem;
+    }
+
+    .contact-social-link {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+    }
+
+    .contact-socials {
+        flex-wrap: wrap;
+        gap: var(--space-1);
+    }
+
+    .contact-form {
+        padding: var(--space-3);
+    }
+
+    .form-label {
+        font-size: 0.78rem;
+    }
+
+    .custom-input {
+        padding: 12px var(--space-2) 12px calc(var(--space-2) + 24px);
+        font-size: 0.82rem;
+    }
+
+    .input-icon {
+        font-size: 0.85rem;
+    }
+
+    /* --- Buttons (global) --- */
+    .btn-primary-custom,
+    .btn-outline-custom {
+        padding: 12px var(--space-3);
+        font-size: 0.82rem;
+    }
+
+    .btn-sm.btn-primary-custom,
+    .btn-sm.btn-outline-custom {
+        padding: 6px 12px;
+        font-size: 0.72rem;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 14px var(--space-3);
+    }
+
+    /* --- Footer --- */
+    .footer-section {
+        padding-top: var(--space-6);
+    }
+
+    .footer-logo {
+        font-size: 1.3rem;
+    }
+
+    .footer-about-text {
+        font-size: 0.82rem;
+    }
+
+    .footer-heading {
+        font-size: 0.88rem;
+        margin-top: var(--space-3);
+        margin-bottom: var(--space-2);
+    }
+
+    .footer-links li a {
+        font-size: 0.82rem;
+    }
+
+    .footer-contact-item {
+        font-size: 0.82rem;
+    }
+
+    .footer-socials a {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+    }
+
     .footer-bottom .row > div {
         text-align: center !important;
     }
@@ -3133,10 +3761,164 @@ a.contact-detail-value:hover {
     .footer-copyright,
     .footer-credit {
         text-align: center;
+        font-size: 0.75rem;
     }
 
     .footer-credit {
         margin-top: var(--space-1);
+    }
+
+    /* --- Back to Top --- */
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: var(--space-2);
+        right: var(--space-2);
+        font-size: 0.95rem;
+    }
+
+    /* --- Preloader --- */
+    .preloader-logo {
+        font-size: 2rem;
+    }
+
+    .preloader-bar {
+        width: 140px;
+    }
+
+    .preloader-text {
+        font-size: 0.7rem;
+    }
+
+    /* --- Floating shapes (smaller on mobile) --- */
+    .shape-1 { width: 250px; height: 250px; }
+    .shape-2 { width: 200px; height: 200px; }
+    .shape-3 { width: 150px; height: 150px; }
+    .shape-4 { width: 120px; height: 120px; }
+    .shape-5 { width: 180px; height: 180px; }
+    .shape-6 { width: 100px; height: 100px; }
+}
+
+
+/* =====================================================
+   26b. RESPONSIVE — EXTRA SMALL MOBILE (≤399px)
+   ===================================================== */
+@media (max-width: 399.98px) {
+    .hero-name {
+        font-size: 1.8rem;
+    }
+
+    .hero-greeting {
+        font-size: 0.82rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.82rem;
+    }
+
+    .hero-description {
+        font-size: 0.8rem;
+    }
+
+    .hero-image-wrapper {
+        max-width: 180px;
+    }
+
+    .hero-stats {
+        gap: var(--space-2);
+    }
+
+    .hero-stat-number {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .about-image-wrapper {
+        max-width: 180px;
+    }
+
+    .about-experience-badge {
+        width: 60px;
+        height: 60px;
+    }
+
+    .about-exp-number {
+        font-size: 1.1rem;
+    }
+
+    .about-exp-text {
+        font-size: 0.5rem;
+    }
+
+    .about-heading {
+        font-size: 1.05rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skill-card {
+        padding: 12px;
+    }
+
+    .skill-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .skill-name {
+        font-size: 0.78rem;
+    }
+
+    .skills-tab {
+        padding: 6px 10px;
+        font-size: 0.68rem;
+    }
+
+    .project-filter {
+        padding: 6px 10px;
+        font-size: 0.68rem;
+    }
+
+    .testimonial-card {
+        padding: var(--space-3) var(--space-2);
+    }
+
+    .testimonial-text {
+        font-size: 0.78rem;
+    }
+
+    .faq-question {
+        font-size: 0.75rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.72rem;
+    }
+
+    .contact-form {
+        padding: var(--space-2);
+    }
+
+    .contact-info-title {
+        font-size: 1.1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .logo-bracket {
+        font-size: 1.4rem;
     }
 }
 
